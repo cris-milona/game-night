@@ -12,9 +12,11 @@ const port = parseInt(process.env.PORT || "3000");
 export default defineConfig({
   plugins: [react()],
   server: {
+    open: true,
     port: port,
   },
   build: {
     outDir: "../client/dist",
+    sourcemap: false,
   },
 });
